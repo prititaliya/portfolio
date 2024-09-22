@@ -1,0 +1,444 @@
+/* Global Styles */
+body {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark gray text */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h1, h2, h3 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Navigation Styles */
+header {
+    background-color: #000; /* Black navigation bar */
+    padding: 10px 20px; /* Padding around nav */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #fff; /* White text for nav links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Light gray on hover */
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 60px 20px; /* Padding for the hero section */
+    text-align: center; /* Center text */
+}
+
+#hero h1 {
+    font-size: 2.5rem; /* Larger heading size */
+}
+
+#hero p {
+    font-size: 1.2rem; /* Subheading size */
+}
+
+.btn {
+    background-color: #000; /* Black button background */
+    color: #fff; /* White button text */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.btn:hover {
+    background-color: #333; /* Dark gray on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Section Styles */
+.section {
+    padding: 40px 20px; /* Padding for sections */
+    text-align: center; /* Center text */
+}
+
+/* About Me Section */
+#bio .about-content {
+    max-width: 800px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+}
+
+/* Skills Section */
+.skills-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.skills-list li {
+    margin: 10px 0; /* Space between items */
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Limit width */
+    margin: 0 auto; /* Center grid */
+}
+
+.project-card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-card h3 {
+    margin: 0 0 10px; /* Margin below heading */
+}
+
+.project-card p {
+    margin: 0 0 15px; /* Margin below paragraph */
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 40px 20px; /* Padding around the section */
+}
+
+.resume-contact-grid {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items at the start */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.resume, .contact {
+    flex: 1; /* Allow items to grow equally */
+    margin: 10px; /* Space between sections */
+    padding: 20px; /* Padding inside each section */
+    background-color: #fff; /* White background for sections */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Contact List */
+.contact-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    font-size: 14px; /* Decrease font size */
+}
+
+.contact-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.contact-list a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Change link color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.contact-list a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Icon styles */
+.contact-list img {
+    width: 20px; /* Set icon width */
+    height: 20px; /* Set icon height */
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Align icons with text */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000; /* Black footer */
+    color: #fff; /* White text in footer */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for footer */
+}
+.profile-img {
+    width: 200px; /* Adjusted width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it a circle */
+    margin-bottom: 2i0px; /* Space below the image */
+}
+
+.resume-contact-grid {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: stretch; /* Stretch items to have the same height */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.resume, .contact {
+    flex: 1; /* Allow items to grow equally */
+    margin: 10px; /* Space between sections */
+    padding: 20px; /* Padding inside each section */
+    background-color: #fff; /* White background for sections */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    min-height: 200px; /* Set a minimum height for both sections */
+}
+
+.view-work-btn {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 12px 24px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    text-align: center; /* Center button text */
+    display: inline-block; /* Align buttons */
+    margin-top: 10px; /* Space above button */
+}
+
+.view-work-btn:hover {
+    background-color: #333; /* Dark gray on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+header {
+    background-color: #000; /* Black navigation bar */
+    padding: 10px 20px; /* Padding around nav */
+}
+
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the navigation items */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for layout */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #fff; /* White text for nav links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Light gray on hover */
+}
+
+.project-card {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center align items */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside project cards */
+    margin: 10px; /* Space between cards */
+    width: 300px; /* Fixed width for project cards */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.project-card a {
+    width: 100%; /* Make buttons full width */
+    text-align: center; /* Center the button text */
+    margin-top: 10px; /* Space between buttons */
+}
+
+.project-card button {
+    width: 100%; /* Ensure buttons are the same width */
+}
+
+.contact-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center align items */
+}
+
+.contact-list li {
+    margin: 0 15px; /* Space between icons */
+}
+
+.contact-list img {
+    width: 24px; /* Set icon width */
+    height: 24px; /* Set icon height */
+    vertical-align: middle; /* Align icons with text */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.contact-list img:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+#hero {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 60px 20px; /* Padding for the hero section */
+    text-align: center; /* Center text */
+}
+.education-card {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    width: 300px; /* Fixed width for education cards */
+    text-align: center; /* Center text */
+}
+
+.education-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.education-card h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Larger font size */
+}
+
+.education-card h4 {
+    margin: 5px 0; /* Space below subheading */
+    color: #666; /* Gray color for subheading */
+    font-weight: normal; /* Normal font weight */
+}
+
+.education-card p {
+    margin: 5px 0; /* Space below paragraphs */
+    font-size: 1rem; /* Font size */
+}
+
+.degree-link {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.degree-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+#hero h1 {
+    font-size: 2.5rem; /* Larger heading size */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflowing text */
+}
+
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite; /* Blinking animation */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+/* Work Experience Section */
+.experience-grid {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the grid */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Space between cards */
+}
+
+.experience-card {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    width: 300px; /* Fixed width for experience cards */
+}
+
+.experience-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.experience-card h3 {
+    margin: 0; /* Remove default margin */
+}
+
+.experience-card h4 {
+    margin: 5px 0; /* Space below subheading */
+    color: #666; /* Gray color for subheading */
+}
+
+.experience-card p {
+    margin: 5px 0; /* Space below paragraphs */
+}
+
+#work-experience {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in; /* Smooth transition */
+}
+
+#work-experience.fade-in {
+    opacity: 1; /* Fully visible */
+}
+
+/* Education Section */
+.education-grid {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the grid */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 20px; /* Space between cards */
+}
+
+.education-card {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    width: 300px; /* Fixed width for education cards */
+}
+
+.education-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.education-card h3 {
+    margin: 0; /* Remove default margin */
+}
+
+.education-card h4 {
+    margin: 5px 0; /* Space below subheading */
+    color: #666; /* Gray color for subheading */
+}
+
+.education-card p {
+    margin: 5px 0; /* Space below paragraphs */
+}
