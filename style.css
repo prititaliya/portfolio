@@ -1,7 +1,59 @@
 /* Global Styles */
+*{
+    transition: background-color 0.3s;
+}
+
+:root{
+    --black-dark: #000;
+    --black-medium: #333;
+    --black-light: #31363F;
+   
+    --gray-dark: #666;
+    --gray-light: #ddd;
+    --gray-medium: #ccc;
+
+    --white-dark: #e9e9e9;
+    --white-medium: #f8f9fa;
+    --white-light: #fff;
+
+    --link: #007bff;
+    --link-hover: #0056b3;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+@media(prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+    }
+}
+
+:root[color-scheme="dark"] {
+    --body-bg: var(--black-dark,);
+    --txt: var(--white-light);
+    --box-bg: var(--black-light);
+    --btn-bg: var(--white-light);
+    --btn-hover: var(--white-dark);
+    --btn-txt: var(--black-dark);
+    --h4-clr: var(--white-dark);
+}
+  
+:root[color-scheme="light"] {
+    --body-bg: var(--white-light);
+    --txt: var(--black-dark);
+    --box-bg: var(--white-light);
+    --btn-bg: var(--black-dark);
+    --btn-hover: var(--black-light);
+    --btn-txt: var(--white-light);
+    --h4-clr: var(--gray-dark);
+}
+
 body {
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark gray text */
+    background-color: var(--body-bg); /* White background */
+    color: var(--txt); /* Dark gray text */
     font-family: Arial, sans-serif; /* Font family */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
@@ -13,7 +65,7 @@ h1, h2, h3 {
 
 /* Navigation Styles */
 header {
-    background-color: #000; /* Black navigation bar */
+    background-color: var(--black-dark); /* Black navigation bar */
     padding: 10px 20px; /* Padding around nav */
 }
 
@@ -29,13 +81,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* White text for nav links */
+    color: var(--white-light); /* White text for nav links */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color transition */
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Light gray on hover */
+    color: var(--gray-medium); /* Light gray on hover */
 }
 
 /* Hero Section Styles */
@@ -43,10 +95,13 @@ nav ul li a:hover {
     background-color: #f0f0f0; /* Light gray background */
     padding: 60px 20px; /* Padding for the hero section */
     text-align: center; /* Center text */
+    color: var(--black-dark);
 }
 
 #hero h1 {
     font-size: 2.5rem; /* Larger heading size */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflowing text */
 }
 
 #hero p {
@@ -54,8 +109,8 @@ nav ul li a:hover {
 }
 
 .btn {
-    background-color: #000; /* Black button background */
-    color: #fff; /* White button text */
+    background-color: var(--btn-bg); /* Black button background */
+    color: var(--btn-txt); /* White button text */
     padding: 10px 20px; /* Button padding */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
@@ -65,7 +120,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: #333; /* Dark gray on hover */
+    background-color: var(--btn-hover); /* Dark gray on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
@@ -102,8 +157,8 @@ nav ul li a:hover {
 }
 
 .project-card {
-    background-color: #fff; /* White background for cards */
-    border: 1px solid #ddd; /* Light border */
+    background-color: var(--box-bg); /* White background for cards */
+    border: 1px solid var(--gray-light); /* Light border */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside cards */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -124,7 +179,7 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-    background-color: #f8f9fa; /* Light background for contrast */
+    background-color: var(--white-medium); /* Light background for contrast */
     padding: 40px 20px; /* Padding around the section */
 }
 
@@ -136,15 +191,7 @@ nav ul li a:hover {
     margin-top: 20px; /* Space above the grid */
 }
 
-.resume, .contact {
-    flex: 1; /* Allow items to grow equally */
-    margin: 10px; /* Space between sections */
-    padding: 20px; /* Padding inside each section */
-    background-color: #fff; /* White background for sections */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
+
 
 /* Contact List */
 .contact-list {
@@ -153,24 +200,18 @@ nav ul li a:hover {
     font-size: 14px; /* Decrease font size */
 }
 
-.contact-list i{
-    font-size: 2rem;
-    display: block;
-    margin: 0.5rem 0;
-}
-
 .contact-list li {
     margin-bottom: 10px; /* Space between list items */
 }
 
 .contact-list a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Change link color */
+    color: var(--txt); /* Change link color */
     transition: color 0.3s; /* Smooth color transition */
 }
 
 .contact-list a:hover {
-    color: #007bff; /* Change color on hover */
+    color: var(--link); /* Change color on hover */
 }
 
 /* Icon styles */
@@ -183,8 +224,9 @@ nav ul li a:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #000; /* Black footer */
-    color: #fff; /* White text in footer */
+    box-shadow: 0 0px 50px#aaa;
+    background-color: var(--black-dark); /* Black footer */
+    color: var(--white-light); /* White text in footer */
     text-align: center; /* Center text */
     padding: 20px; /* Padding for footer */
 }
@@ -208,7 +250,6 @@ footer {
     object-fit: cover;
 }
 
-
 .resume-contact-grid {
     display: flex; /* Use Flexbox for layout */
     justify-content: space-between; /* Space between items */
@@ -221,16 +262,17 @@ footer {
     flex: 1; /* Allow items to grow equally */
     margin: 10px; /* Space between sections */
     padding: 20px; /* Padding inside each section */
-    background-color: #fff; /* White background for sections */
-    border: 1px solid #ddd; /* Light border */
+    background-color: var(--box-bg); /* White background for sections */
+    color:  var(--txt);
+    border: 1px solid var(--gray-light); /* Light border */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     min-height: 200px; /* Set a minimum height for both sections */
 }
 
 .view-work-btn {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    background-color: var(--black-dark); /* Black background */
+    color: var(--white-light); /* White text */
     padding: 12px 24px; /* Padding for the button */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
@@ -243,12 +285,13 @@ footer {
 }
 
 .view-work-btn:hover {
-    background-color: #333; /* Dark gray on hover */
+    background-color: var(--black-medium); /* Dark gray on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 header {
-    background-color: #000; /* Black navigation bar */
+    position: relative;
+    background-color: var(--black-dark); /* Black navigation bar */
     padding: 10px 20px; /* Padding around nav */
 }
 
@@ -268,13 +311,42 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff; /* White text for nav links */
+    color: var(--white-light); /* White text for nav links */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color transition */
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Light gray on hover */
+    color: var(--gray-medium); /* Light gray on hover */
+}
+
+.theme-switcher{
+    position: absolute;
+    top: 50%;
+    right: 2.5%;
+    transform: translate(0,-50%);
+}
+
+.theme-switcher button{
+    display: none;
+    position: relative;
+    padding: 1.2rem;
+    border: none;
+    background-color: var(--white-light);
+    border-radius: 50%;
+}
+
+.theme-switcher button.active{
+    display: inline-block;
+}
+
+.theme-switcher button i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+    color: var(--black-dark);
 }
 
 .project-card {
@@ -282,7 +354,7 @@ nav ul li a:hover {
     flex-direction: column; /* Stack items vertically */
     justify-content: space-between; /* Distribute space between items */
     align-items: center; /* Center align items */
-    border: 1px solid #ccc; /* Light gray border */
+    border: 1px solid var(--gray-medium); /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     padding: 20px; /* Padding inside project cards */
     margin: 10px; /* Space between cards */
@@ -307,6 +379,12 @@ nav ul li a:hover {
     justify-content: center; /* Center align items */
 }
 
+.contact-list i{
+    font-size: 2rem;
+    display: block;
+    margin: 0.5rem 0;
+}
+
 .contact-list li {
     margin: 0 15px; /* Space between icons */
 }
@@ -322,14 +400,9 @@ nav ul li a:hover {
     transform: scale(1.2); /* Scale up the icon on hover */
 }
 
-#hero {
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 60px 20px; /* Padding for the hero section */
-    text-align: center; /* Center text */
-}
 .education-card {
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Light border */
+    background-color: var(--box-bg); /* White background */
+    border: 1px solid var(--gray-light); /* Light border */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside cards */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -347,27 +420,28 @@ nav ul li a:hover {
     font-size: 1.5rem; /* Larger font size */
 }
 
+.education-card h4 {
+    margin: 1rem 0; /* Space below subheading */
+    color: var(--h4-clr); /* Gray color for subheading */
+    font-weight: 800;
+}
+
 .education-card p {
     margin: 5px 0; /* Space below paragraphs */
     font-size: 1rem; /* Font size */
 }
 
 .degree-link {
-    color: #007bff; /* Link color */
+    color: var(--link); /* Link color */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color transition */
 }
 
 .degree-link:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: var(--link-hover); /* Darker blue on hover */
     text-decoration: underline; /* Underline on hover */
 }
 
-#hero h1 {
-    font-size: 2.5rem; /* Larger heading size */
-    white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden; /* Hide overflowing text */
-}
 
 .cursor {
     display: inline-block;
@@ -388,8 +462,8 @@ nav ul li a:hover {
 }
 
 .experience-card {
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Light border */
+    background-color: var(--box-bg); /* White background */
+    border: 1px solid var(--gray-light); /* Light border */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding inside cards */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -406,7 +480,7 @@ nav ul li a:hover {
 }
 
 .experience-card h4 {
-    color: #666;
+    color: var(--h4-clr);
     margin: 1rem 0;
     font-weight: 800;
 }
@@ -432,15 +506,6 @@ nav ul li a:hover {
     gap: 20px; /* Space between cards */
 }
 
-.education-card {
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside cards */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
-    width: 300px; /* Fixed width for education cards */
-}
 
 .education-card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
@@ -448,12 +513,6 @@ nav ul li a:hover {
 
 .education-card h3 {
     margin: 0; /* Remove default margin */
-}
-
-.education-card h4 {
-    margin: 1rem 0; /* Space below subheading */
-    color: #666; /* Gray color for subheading */
-    font-weight: 800;
 }
 
 .education-card p {
