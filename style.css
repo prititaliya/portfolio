@@ -63,31 +63,9 @@ h1, h2, h3 {
     margin: 0; /* Remove default margin */
 }
 
-/* Navigation Styles */
-header {
-    background-color: var(--black-dark); /* Black navigation bar */
-    padding: 10px 20px; /* Padding around nav */
-}
-
-nav ul {
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Use flexbox for layout */
-    justify-content: flex-start; /* Align items to the left */
-    padding: 0; /* Remove default padding */
-}
-
-nav ul li {
-    margin-right: 20px; /* Space between nav items */
-}
-
-nav ul li a {
-    color: var(--white-light); /* White text for nav links */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-nav ul li a:hover {
-    color: var(--gray-medium); /* Light gray on hover */
+a{
+    color: var(--txt);
+    text-decoration: none;
 }
 
 /* Hero Section Styles */
@@ -149,20 +127,14 @@ nav ul li a:hover {
 
 /* Projects Section */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the grid */
+    flex-wrap: wrap; /* Allow items to wrap */
     gap: 20px; /* Space between cards */
-    max-width: 1200px; /* Limit width */
-    margin: 0 auto; /* Center grid */
 }
 
-.project-card {
-    background-color: var(--box-bg); /* White background for cards */
-    border: 1px solid var(--gray-light); /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside cards */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+.project-card{
+    width: 300px;
 }
 
 .project-card:hover {
@@ -183,43 +155,35 @@ nav ul li a:hover {
     padding: 40px 20px; /* Padding around the section */
 }
 
-.resume-contact-grid {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: flex-start; /* Align items at the start */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    margin-top: 20px; /* Space above the grid */
-}
-
-
-
 /* Contact List */
+
 .contact-list {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
-    font-size: 14px; /* Decrease font size */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns in each row */
+    grid-auto-rows: 1fr; 
+    gap: 16px;
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto;
 }
 
-.contact-list li {
-    margin-bottom: 10px; /* Space between list items */
+.contact-list i{
+    font-size: 2rem;
+    display: block;
+    margin: 0.5rem 0;
 }
 
-.contact-list a {
-    text-decoration: none; /* Remove underline from links */
-    color: var(--txt); /* Change link color */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-.contact-list a:hover {
-    color: var(--link); /* Change color on hover */
-}
-
-/* Icon styles */
 .contact-list img {
-    width: 20px; /* Set icon width */
-    height: 20px; /* Set icon height */
-    margin-right: 8px; /* Space between icon and text */
+    width: 24px; /* Set icon width */
+    height: 24px; /* Set icon height */
     vertical-align: middle; /* Align icons with text */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.contact-list img:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
 }
 
 /* Footer Styles */
@@ -251,16 +215,14 @@ footer {
 }
 
 .resume-contact-grid {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: stretch; /* Stretch items to have the same height */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    margin-top: 20px; /* Space above the grid */
+    display: grid;
+    gap: 16px;
+    margin: 0 40px;
+    margin-top: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 
 .resume, .contact {
-    flex: 1; /* Allow items to grow equally */
-    margin: 10px; /* Space between sections */
     padding: 20px; /* Padding inside each section */
     background-color: var(--box-bg); /* White background for sections */
     color:  var(--txt);
@@ -289,36 +251,6 @@ footer {
     transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-header {
-    position: relative;
-    background-color: var(--black-dark); /* Black navigation bar */
-    padding: 10px 20px; /* Padding around nav */
-}
-
-nav {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the navigation items */
-}
-
-nav ul {
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Use flexbox for layout */
-    padding: 0; /* Remove default padding */
-}
-
-nav ul li {
-    margin: 0 15px; /* Space between nav items */
-}
-
-nav ul li a {
-    color: var(--white-light); /* White text for nav links */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-nav ul li a:hover {
-    color: var(--gray-medium); /* Light gray on hover */
-}
 
 .theme-switcher{
     position: absolute;
@@ -330,7 +262,7 @@ nav ul li a:hover {
 .theme-switcher button{
     display: none;
     position: relative;
-    padding: 1.2rem;
+    padding: 1.05rem;
     border: none;
     background-color: var(--white-light);
     border-radius: 50%;
@@ -345,20 +277,19 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--black-dark);
 }
 
 .project-card {
+    background-color: var(--box-bg); /* White background for cards */
+    border: 1px solid var(--gray-light); /* Light border */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack items vertically */
     justify-content: space-between; /* Distribute space between items */
     align-items: center; /* Center align items */
-    border: 1px solid var(--gray-medium); /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     padding: 20px; /* Padding inside project cards */
-    margin: 10px; /* Space between cards */
-    width: 300px; /* Fixed width for project cards */
     transition: transform 0.3s; /* Smooth transition for scaling */
 }
 
@@ -370,34 +301,6 @@ nav ul li a:hover {
 
 .project-card button {
     width: 100%; /* Ensure buttons are the same width */
-}
-
-.contact-list {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    display: flex; /* Flexbox for horizontal alignment */
-    justify-content: center; /* Center align items */
-}
-
-.contact-list i{
-    font-size: 2rem;
-    display: block;
-    margin: 0.5rem 0;
-}
-
-.contact-list li {
-    margin: 0 15px; /* Space between icons */
-}
-
-.contact-list img {
-    width: 24px; /* Set icon width */
-    height: 24px; /* Set icon height */
-    vertical-align: middle; /* Align icons with text */
-    transition: transform 0.3s; /* Smooth transition for scaling */
-}
-
-.contact-list img:hover {
-    transform: scale(1.2); /* Scale up the icon on hover */
 }
 
 .education-card {
@@ -517,4 +420,87 @@ nav ul li a:hover {
 
 .education-card p {
     margin: 5px 0; /* Space below paragraphs */
+}
+
+/* General Header Styling */
+header {
+    position: relative;
+    background-color: var(--black-dark);
+    padding: 25px;
+}
+  
+  
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the navigation items */
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+ 
+
+
+nav ul li a {
+    color: var(--white-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+nav ul li a:hover {
+    color: var(--gray-medium);
+}
+  
+/* Hamburger Button Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white-light);
+    transition: transform 0.3s;
+}
+  
+/* Responsive Styling */
+@media (max-width: 900px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--black-dark);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
