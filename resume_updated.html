@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prit Italiya - Resume</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        .company-name {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .date {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .bullet-points {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .bullet-points li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        .skill-category h4 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+        .skill-category ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .skill-category li {
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .project-date {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+        .education-degree {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        .education-school {
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="name">Prit Italiya</div>
+        <div class="contact-info">
+            Winnipeg | +1 431-990-2685 | prititaliya2244@gmail.com | LinkedIn | GitHub
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        
+        <div class="education-degree">B.Sc. (Honours), Computer Science (Statistics Minor)</div>
+        <div class="education-school">University of Manitoba</div>
+        <div class="date">Jan 2024 - Dec 2026</div>
+        
+        <div class="education-degree">UTP Stage II, Science</div>
+        <div class="education-school">International College of Manitoba</div>
+        <div class="date">Jan 2023 - Dec 2023</div>
+        
+        <div class="education-degree">Diploma in Engineering, Information & Technology</div>
+        <div class="education-school">Gujarat Technological University</div>
+        <div class="date">Aug 2019 - Jul 2022</div>
+    </div>
+
+    <!-- Technical Skills Section -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Data Analysis & Engineering</h4>
+                <ul>
+                    <li>Data Cleaning & Wrangling</li>
+                    <li>ETL & Data Integration</li>
+                    <li>Statistical Analysis</li>
+                    <li>Data Visualization</li>
+                    <li>Data Pipelines & Warehouses</li>
+                    <li>Feature Engineering & Selection</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Machine Learning & AI</h4>
+                <ul>
+                    <li>Regression & Classification Models</li>
+                    <li>Deep Learning & Neural Networks</li>
+                    <li>NLP & Semantic Search</li>
+                    <li>LLM Integration & RAG</li>
+                    <li>Model Evaluation & Optimization</li>
+                    <li>Ensemble Learning & XGBoost</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Programming & Tools</h4>
+                <ul>
+                    <li>Python, Java, JavaScript, C++, R</li>
+                    <li>SQL, MySQL, Google BigQuery</li>
+                    <li>Git, GitHub, Version Control</li>
+                    <li>Google Cloud (GCP), AWS</li>
+                    <li>Scikit-Learn, Pandas, NumPy</li>
+                    <li>LangChain, Hugging Face</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+        
+        <div class="job-title">Data Engineering Intern</div>
+        <div class="company-name">Naos Blockchain Capital</div>
+        <div class="date">Nov 2024 - Mar 2025</div>
+        <ul class="bullet-points">
+            <li>Developed real-time business intelligence dashboards, improving data visibility for executives by 30%</li>
+            <li>Designed and optimized ETL pipelines using SQL, Python, and Google Cloud Products, reducing data processing time by 40%</li>
+            <li>Built predictive analytics models to support strategic decision-making, improving accuracy in forecasting by 25%</li>
+            <li>Managed version-controlled workflows using GitHub, streamlining collaboration among team members</li>
+        </ul>
+        
+        <div class="job-title">Cashier</div>
+        <div class="company-name">Esso</div>
+        <div class="date">Jan 2023 - Present</div>
+        <ul class="bullet-points">
+            <li>Handled daily cash, credit, and mobile payments with 100% accuracy while providing friendly and efficient customer service</li>
+            <li>Managed inventory restocking, pump monitoring, and store cleanliness to maintain smooth operations during high-traffic hours</li>
+            <li>Resolved customer inquiries and complaints professionally, contributing to increased customer satisfaction and repeat business</li>
+        </ul>
+    </div>
+
+    <!-- Leadership & Volunteer Experience Section -->
+    <div class="section">
+        <div class="section-title">Leadership & Volunteer Experience</div>
+        
+        <div class="job-title">Peer Educator</div>
+        <div class="company-name">Science Students' Association, University of Manitoba</div>
+        <div class="date">Sep 2024 - Present</div>
+        <ul class="bullet-points">
+            <li>Conducted tutoring sessions for COMP 1010, COMP 1020, STAT 1150, and MATH 1240</li>
+            <li>Delivered 10+ hours of interactive academic support, leading to improved student performance and engagement</li>
+            <li>Improved comprehension in 80% of students through feedback and quiz outcomes</li>
+            <li>Customized teaching approaches to meet diverse learning needs and collaborated with faculty for resource alignment</li>
+        </ul>
+        
+        <div class="job-title">Peer Educator</div>
+        <div class="company-name">International College of Manitoba (ICM)</div>
+        <div class="date">Jan 2024 - Oct 2024</div>
+        <ul class="bullet-points">
+            <li>Provided tutoring and academic mentoring for 30+ students, focusing on foundational computing and mathematics</li>
+            <li>Conducted 50+ hours of one-on-one and group sessions, helping students transition smoothly into university-level expectations</li>
+            <li>Achieved 60%+ repeat attendance, highlighting effectiveness and value of sessions</li>
+            <li>Reported 70% improvement in average grades among tutored students, confirmed through academic feedback and performance data</li>
+        </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+        <div class="section-title">Projects</div>
+        
+        <div class="project-title">Quizzer: Python-based Interactive PDF Q&A System</div>
+        <div class="project-date">Aug 2025</div>
+        <ul class="bullet-points">
+            <li>Engineered an application enabling users to upload and interact with PDF documents through an AI-powered Q&A interface, integrating cutting-edge natural language processing with document parsing capabilities</li>
+            <li>Developed the core workflow using LangChain, vector embeddings (Chroma DB), and Google Gemini AI to support automated semantic search and context-aware answer generation from document content</li>
+            <li>Built and optimized the backend components for parsing, chunking, and embedding PDF content, ensuring accurate and efficient retrieval of relevant information in real-time queries</li>
+            <li>Focused on robust testing and modular design, establishing maintainable code and facilitating future enhancements of the system's capabilities</li>
+        </ul>
+        
+        <div class="project-title">Wealth Wise - Android Wealth Management App</div>
+        <div class="project-date">Jan 2025 - Apr 2025</div>
+        <ul class="bullet-points">
+            <li>Spearheaded the development of an Android application designed to assist users in tracking and managing their financial activities, emphasizing a clean and intuitive user interface</li>
+            <li>Played a pivotal role in implementing the application's core logic, including budget validation, category-based tracking, and goal-based projections</li>
+            <li>Led the testing efforts, achieving over 90% coverage across unit, integration, and acceptance tests, ensuring robust and reliable application performance</li>
+            <li>Embraced agile practices, participating in iterative development cycles, and adapting to feedback to enhance application features and user experience</li>
+        </ul>
+        
+        <div class="project-title">Personalized Movie Recommendation System</div>
+        <div class="project-date">Dec 2024</div>
+        <ul class="bullet-points">
+            <li>Built a content-based recommendation system predicting user preferences with over 1,800 movie datasets</li>
+            <li>Used cosine similarity to enhance user-item matching, improving recommendation accuracy by 20%</li>
+            <li>Implemented data preprocessing and normalization (StandardScaler) to handle sparse data matrices efficiently</li>
+            <li>Optimized the system's recommendation pipeline, reducing query response time by 35%</li>
+        </ul>
+        
+        <div class="project-title">Spam Email Detection System</div>
+        <div class="project-date">Jun 2025</div>
+        <ul class="bullet-points">
+            <li>Developed a spam email classifier using Multinomial Naive Bayes, achieving 99.56% accuracy on test data</li>
+            <li>Implemented text preprocessing and vectorization techniques, converting raw email content into numerical features</li>
+            <li>Created data visualizations including spam vs. non-spam email distribution and word cloud analysis to extract insights</li>
+            <li>Designed a machine learning pipeline integrating feature extraction and classification for streamlined predictions</li>
+        </ul>
+        
+        <div class="project-title">College Website (Full-Stack Development)</div>
+        <div class="project-date">Nov 2021 - Jun 2022</div>
+        <ul class="bullet-points">
+            <li>Led the development of a faculty management platform with real-time updates and MySQL integration</li>
+            <li>Designed secure user authentication and document-sharing features, improving collaboration by 50%</li>
+            <li>Iteratively improved website functionality based on user feedback, enhancing the user experience</li>
+        </ul>
+    </div>
+</body>
+</html>
